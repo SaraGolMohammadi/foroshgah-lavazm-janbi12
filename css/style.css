@@ -258,9 +258,9 @@ margin-bottom: 40px;
             display: flex;
     align-items: center; /* هم‌راستا کردن input و آیکون */
     /* justify-content: flex-start; چیدمان به مت چپ */
- /* margin-right: 450px; */
- margin-right: 0; 
- justify-content: center;
+ margin-right: 450px;
+ 
+ 
         }
         
         .auth-links {

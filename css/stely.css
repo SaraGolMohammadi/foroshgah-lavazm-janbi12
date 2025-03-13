@@ -273,7 +273,6 @@ align-items: center;
 .discount{
     position: absolute;
     right:25px;
-   background-color: #ed2630;
    width: 25px;
    padding: 1px;
    border-radius: 5px;

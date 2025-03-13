@@ -20,24 +20,28 @@
 }
 .search-container {
     position: relative;
-    /* width: 300px; */
+
 }
 
 .input-div {
-    width:550px;
-    height: 30px;
-    padding: 10px 60px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+    text-align: center;
+
+    max-width: 400px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    font-size: 14px;
-    text-align: right;
-    background-color: rgb(245, 242, 242);
+    border-radius: 10px;
+    padding: 10px;
+    background: #fff;
+    position: relative;
+    box-sizing: border-box; 
 }
 
 .img-input {
     position: absolute;
-    right: 2px;
+    right: -70px;
     top: 50%;
     transform: translateY(-50%);
     width: 200px;
@@ -45,17 +49,24 @@
     cursor: pointer;
     padding-left: 20px;
 }
+.auth-contener{
+    display: flex;
+align-items: center; /* هم‌راستا کردن input و آیکون */
+justify-content: flex-start; /* چیدمان به سمت چپ */
+margin-right: 450px;
+}
 
 .auth-links {
     display: flex;
+    justify-content:center;
     align-items: center;
-    margin-right: 250px;
-    border:1px solid black;
+       border:1px solid black;
     border-radius: 5px;
     width: 150px;
     height: 40px;
     padding-left: 15px;
     font-weight: bold;
+    /* margin-left: 250px; */
 }
 
 .auth-links a {
@@ -83,18 +94,17 @@
     align-items: center;
     padding-left: 10px;
     padding-right: 10px;
-    width: 25px;
+    width: 20px;
     height: 36px;
-    margin-left:120px;
-}
-.shoppin h3{
-    display: none;
-}
+    /* margin-left:120px; */
 
+}
 
 .auth-contener{
     display: flex;
     flex-direction:row-reverse;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
 }
 .hamburger-icon {
@@ -206,7 +216,6 @@ color: black;
         right:24px;
     } 
 
- 
 /* استایل کلی اسلایدر */
 .slider-container {
     position: relative;
@@ -874,63 +883,104 @@ padding-bottom: 20px;
 
 
 @media (max-width: 480px) {
-    .banner{
-     width: 100%;
+    .banner {
+        width: 100%;
     }
-    .contenter{
+
+    .contenter, .contenter-img {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
     }
-    .contenter-img{
-        width: 100px;
+
+    .contenter img {
+        margin-left: 0;
+        width: 80%;
+        max-width: 200px;
     }
-    .img-input{
-        display: none;
+
+    .search-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin: 0 auto;
     }
+.img-input{
+    display: none;
+}
     .input-div {
         display: flex;
         align-items: center;
         justify-content: center;
-        width:400px;
+        width: 90%;
         max-width: 350px;
         border: 1px solid #ccc;
         border-radius: 10px;
         padding: 10px;
         background: #fff;
     }
-    .auth-contener{
+
+    .shoppin img {
+        margin-left: 18px;
+        width: 20px;
+    }
+   .shoppin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-right: 10px; */
+   }
+    .auth-contener {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-left: 150px;
-        
+        /* background-color: #a21920; */
+        margin-right: 150px;
     }
-   .auth-links{
-    font-size: 18px;
-   }
-.div-contenter ul{
-font-size: 20px;
-display: flex;
-flex-direction: column;
-/* gap: 20px; */
-text-align: right;
-}
-.hamburger-menu{
-    margin-top: 35%;
-    margin-right:50px;
+
+
+    .div-contenter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .div-contenter ul {
+        width: 100%;
+        max-width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+
+    .hamburger-menu {
+        margin-top: 20px;
+        /* text-align: center; */
+    }
+.slider{
+    width: 100%;
 }
 button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-   width: 20px;
+   width: 15px;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     z-index: 10;
     background:none;
+   
 }
 button.prev {
     left: 80%;
@@ -940,17 +990,23 @@ button.prev {
 button.next {
     right: 10px;
 }
-
+button.next img{
+    width: 20px;
+    }
+    button.prev img{
+        width: 15px;
+    }
 .indicators li {
     width: 1px;
     height: 10px;
-    top: 30px;
+    top: 80%;
 }
 .slider1-next::after,
 .slider1-prev::after {
-    width: 20px;
+    width: 5px;
     margin-bottom: 250%;
 }
+
 .section-header{
     font-size: 15px;
 }
@@ -1138,14 +1194,21 @@ width:90%;
            width: 100px;
        }
        .input-div{
-           width: 80%;
+           /* width: 80%; */
            margin-right: 50px;
+           background-color: #a21920;
+       }
+       .input-div input{
+        width: 400px;
+       }
+       .img-input{
+        right: 1px;
        }
        .auth-contener{
            display: flex;
            justify-content: center;
            align-items: center;
-           margin-left: 150px;
+           margin-left: 50%;
            
        }
       .auth-links{
@@ -1153,10 +1216,7 @@ width:90%;
       }
    .div-contenter ul{
    font-size: 12px;
-   display: flex;
-   flex-direction:row-reverse;
-   justify-content: center;
-   gap:10px;
+   gap:15px;
    text-align: right;
    white-space: nowrap;
    }
@@ -1211,7 +1271,7 @@ width:90%;
        flex-direction: column;
        justify-content: center;
       align-items: center;
-       margin-left: 15%;
+       margin-left: 10%;
        gap: 10px;
    }
    .card img{
@@ -1219,8 +1279,8 @@ width:90%;
    }
    .section-div1{
        margin: 50px;
-       height: 300px;
-       /* margin-top: 10px; */
+       height: 350px;
+       /* margin-top: 100px; */
       
        
    }

@@ -303,9 +303,7 @@ margin-bottom: 40px;
             height: 36px;
             /* margin-left:120px; */
         }
-        .shoppin h3{
-            display: none;
-        }
+     
    
         .auth-contener{
             display: flex;
@@ -451,7 +449,7 @@ margin-bottom: 40px;
             
                 .contenter img {
                     margin-left: 0;
-                    width: 80%;
+                    width: 60%;
                     max-width: 200px;
                 }
             
@@ -496,7 +494,7 @@ margin-bottom: 40px;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                /* margin-right: 10px; */
+                margin-right: 10px;
                }
                 .auth-contener {
                     display: flex;
